@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <meta name="theme-color" content="#101820">
+
+    <title>NOVARA — The Republic</title>
+
+    <meta name="description"
+          content="Enter NOVARA, a living virtual nation.">
+
+    <link rel="stylesheet" href="style.css">
+
+    <script type="importmap">
+    {
+        "imports": {
+            "three": "https://cdn.jsdelivr.net/npm/three@0.180.0/build/three.module.js"
+        }
+    }
+    </script>
+
+    <script type="module" src="game.js"></script>
+</head>
+
+<body>
+
+    <div id="game-container"></div>
+
+    <header id="top-bar">
+        <div class="brand">
+            <span class="brand-icon">N</span>
+            <div>
+                <h1>NOVARA</h1>
+                <p>THE REPUBLIC</p>
+            </div>
+        </div>
+
+        <div class="player-info">
+            <span id="player-name">Citizen</span>
+            <span id="player-money">₦ 0 UNR</span>
+        </div>
+    </header>
+
+    <div id="welcome-screen">
+        <div class="welcome-card">
+            <div class="welcome-symbol">N</div>
+
+            <p class="eyebrow">A NEW WORLD AWAITS</p>
+
+            <h2>Welcome to<br>NOVARA.</h2>
+
+            <p class="welcome-description">
+                Build your life. Create your future.
+                Become part of a living nation.
+            </p>
+
+            <button id="enter-world">
+                ENTER THE WORLD
+            </button>
+
+            <p class="version">FIRST CITY · BUILD 001</p>
+        </div>
+    </div>
+
+    <div id="game-hud" hidden>
+        <div class="location-card">
+            <span class="status-dot"></span>
+            <div>
+                <strong>NOVARA CITY</strong>
+                <small>THE FIRST DISTRICT</small>
+            </div>
+        </div>
+
+        <div class="needs-card">
+            <span>DAY <strong id="game-day">1</strong></span>
+            <span>TIME <strong id="game-time">08:00</strong></span>
+        </div>
+
+        <div class="control-hint">
+            <span>W A S D</span> MOVE
+            <span>V</span> CAMERA
+        </div>
+    </div>
+
+    <div id="mobile-controls" hidden>
+        <div class="movement-pad">
+            <button data-move="forward">▲</button>
+
+            <div class="movement-row">
+                <button data-move="left">◀</button>
+                <button data-move="backward">▼</button>
+                <button data-move="right">▶</button>
+            </div>
+        </div>
+
+        <button id="jump-button">JUMP</button>
+    </div>
+
+    <div id="message" role="status" aria-live="polite"></div>
+
+</body>
+</html>
